@@ -39,7 +39,7 @@ def recommend_track(track_name, df, X, top_n=10):
     similar_indices = sim_scores.argsort()[::-1][1:top_n+1]
 
     # Prepare results
-    recommendations = df.iloc[similar_indices][['name_track', 'artists', 'genres', 'popularity_track']].copy()
+    recommendations = df.iloc[similar_indices][['name_track', 'artists']].copy()
     recommendations['similarity'] = sim_scores[similar_indices]
     return recommendations
 

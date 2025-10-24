@@ -8,3 +8,4 @@ PyYAML
 fastapi
 uvicorn
 sentence_transformers
+spacy
